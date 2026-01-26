@@ -1,7 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslation } from '@/hooks/use-translation';
+import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 import { WordRotator } from '@/components/WordRotator';
 import { AbstractShapes } from '@/components/AbstractShapes';
@@ -10,7 +11,7 @@ import { ArrowRight, Play, Building2, TrendingDown, Zap } from 'lucide-react';
 
 
 export function HeroSection() {
-  const t = useTranslations('hero');
+  const t = useTranslation('hero');
 
   const stats = [
     { icon: Building2, label: t('stats.companies') },

@@ -1,21 +1,19 @@
 'use client';
 
-import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { Globe } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Language } from '@/lib/i18n/storage';
 
-const languages = [
+const languages: { code: Language; name: string; flag: string }[] = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
 ];
 
 export function LanguageSwitcher() {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -29,10 +27,10 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const currentLanguage = languages.find((lang) => lang.code === locale);
+  const currentLanguage = languages.find((lang) => lang.code === language);
 
-  const handleLanguageChange = (langCode: string) => {
-    router.replace(pathname, { locale: langCode as 'en' | 'de' | 'fr' });
+  const handleLanguageChange = (langCode: Language) => {
+    setLanguage(langCode);
     setIsOpen(false);
   };
 
@@ -60,7 +58,7 @@ export function LanguageSwitcher() {
               className={cn(
                 'w-full flex items-center gap-3 px-4 py-2 text-left transition-colors',
                 'hover:bg-slate-100 dark:hover:bg-slate-700',
-                locale === lang.code && 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
+                language === lang.code && 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'
               )}
             >
               <span>{lang.flag}</span>

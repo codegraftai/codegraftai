@@ -1,13 +1,14 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslation } from '@/hooks/use-translation';
+import Link from 'next/link';
+
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Linkedin, Twitter, Github, Mail, ArrowRight, Check } from 'lucide-react';
 
 export function Footer() {
-  const t = useTranslations('footer');
+  const t = useTranslation('footer');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 

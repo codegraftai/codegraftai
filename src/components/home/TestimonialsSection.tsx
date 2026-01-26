@@ -1,12 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from '@/hooks/use-translation';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import Image from 'next/image';
 
 export function TestimonialsSection() {
-  const t = useTranslations('testimonials');
+  const t = useTranslation('testimonials');
 
   const testimonials = [
     { index: 0, avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face' },

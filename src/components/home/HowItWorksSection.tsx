@@ -1,13 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from '@/hooks/use-translation';
 import { motion } from 'framer-motion';
 import { Download, Search, Settings } from 'lucide-react';
 
 const stepIcons = [Download, Search, Settings];
 
 export function HowItWorksSection() {
-  const t = useTranslations('howItWorks');
+  const t = useTranslation('howItWorks');
 
   const steps = [
     { key: 'ingest', icon: stepIcons[0] },

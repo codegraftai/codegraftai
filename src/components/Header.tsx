@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/routing';
+import { useTranslation } from '@/hooks/use-translation';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { Menu, X, ChevronRight } from 'lucide-react';
@@ -10,7 +12,7 @@ import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Header() {
-  const t = useTranslations('nav');
+  const t = useTranslation('nav');
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,12 +1,13 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslation } from '@/hooks/use-translation';
+import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export function CTASection() {
-  const t = useTranslations('cta');
+  const t = useTranslation('cta');
 
   return (
     <section className="section-padding relative overflow-hidden">

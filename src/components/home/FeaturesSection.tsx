@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from '@/hooks/use-translation';
 import { motion } from 'framer-motion';
 import { AbstractShapes } from '@/components/AbstractShapes';
 import { Brain, Eye, Database, Shield, Users, Clock } from 'lucide-react';
@@ -15,7 +15,7 @@ const featureIcons = {
 };
 
 export function FeaturesSection() {
-  const t = useTranslations('features');
+  const t = useTranslation('features');
 
   const features = [
     { key: 'graphRag', icon: featureIcons.graphRag },

@@ -1,0 +1,18 @@
+{
+  "architectural-drift": {
+    "title": "Architektur-Drift verstehen: Der stille Killer der Engineering-Geschwindigkeit",
+    "excerpt": "Erfahren Sie, wie sich Architektur-Drift im Laufe der Zeit ansammelt und warum traditionelle Observability-Tools sie nicht erkennen, bis es zu spät ist.",
+    "author": "Dr. Alexandra Müller",
+    "date": "2026-01-15",
+    "readTime": "8 Min. Lesezeit",
+    "category": "Architektur"
+  },
+  "graphrag-architecture": {
+    "title": "Warum wir GraphRAG für Architektur-Intelligenz gewählt haben",
+    "excerpt": "Ein tiefer Einblick, wie Graph Retrieval-Augmented Generation die Art transformiert, wie KI über komplexe Softwaresysteme nachdenkt.",
+    "author": "James Park",
+    "date": "2026-01-08",
+    "readTime": "12 Min. Lesezeit",
+    "category": "Technologie"
+  }
+}

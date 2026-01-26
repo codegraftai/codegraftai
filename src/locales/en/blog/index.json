@@ -1,0 +1,18 @@
+{
+  "architectural-drift": {
+    "title": "Understanding Architectural Drift: The Silent Killer of Engineering Velocity",
+    "excerpt": "Learn how architectural drift accumulates over time and why traditional observability tools fail to detect it until it's too late.",
+    "author": "Dr. Alexandra Müller",
+    "date": "2026-01-15",
+    "readTime": "8 min read",
+    "category": "Architecture"
+  },
+  "graphrag-architecture": {
+    "title": "Why We Chose GraphRAG for Architectural Intelligence",
+    "excerpt": "A deep dive into how Graph Retrieval-Augmented Generation transforms how AI reasons about complex software systems.",
+    "author": "James Park",
+    "date": "2026-01-08",
+    "readTime": "12 min read",
+    "category": "Technology"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "architectural-drift": {
+    "title": "Comprendre la Dérive Architecturale : Le Tueur Silencieux de la Vélocité d'Ingénierie",
+    "excerpt": "Découvrez comment la dérive architecturale s'accumule au fil du temps et pourquoi les outils d'observabilité traditionnels ne la détectent pas avant qu'il ne soit trop tard.",
+    "author": "Dr. Alexandra Müller",
+    "date": "2026-01-15",
+    "readTime": "8 min de lecture",
+    "category": "Architecture"
+  },
+  "graphrag-architecture": {
+    "title": "Pourquoi Nous Avons Choisi GraphRAG pour l'Intelligence Architecturale",
+    "excerpt": "Une plongée profonde dans la façon dont la Génération Augmentée par Récupération de Graphe transforme la façon dont l'IA raisonne sur les systèmes logiciels complexes.",
+    "author": "James Park",
+    "date": "2026-01-08",
+    "readTime": "12 min de lecture",
+    "category": "Technologie"
+  }
+}
