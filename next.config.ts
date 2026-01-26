@@ -7,9 +7,11 @@ const withNextIntl = createNextIntlPlugin();
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
+  output: 'export',
   experimental: {
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
