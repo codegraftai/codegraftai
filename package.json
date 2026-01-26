@@ -2,6 +2,7 @@
   "name": "graftstudio",
   "version": "1.0.0",
   "description": "CodeGraft - Structural Integrity Platform for Modern Software Architecture",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
