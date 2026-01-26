@@ -2,6 +2,43 @@
 
 import { useEffect, useRef } from 'react';
 
+class Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  opacity: number;
+
+  constructor(canvasWidth: number, canvasHeight: number) {
+    this.x = Math.random() * canvasWidth;
+    this.y = Math.random() * canvasHeight;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = Math.random() * 0.5 - 0.25;
+    this.speedY = Math.random() * 0.5 - 0.25;
+    this.opacity = Math.random() * 0.5 + 0.2;
+  }
+
+  update(canvasWidth: number, canvasHeight: number) {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if (this.x > canvasWidth) this.x = 0;
+    if (this.x < 0) this.x = canvasWidth;
+    if (this.y > canvasHeight) this.y = 0;
+    if (this.y < 0) this.y = canvasHeight;
+  }
+
+  draw(drawCtx: CanvasRenderingContext2D, isDark: boolean) {
+    drawCtx.fillStyle = isDark
+      ? `rgba(99, 102, 241, ${this.opacity})`
+      : `rgba(99, 102, 241, ${this.opacity * 0.5})`;
+    drawCtx.beginPath();
+    drawCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    drawCtx.fill();
+  }
+}
+
 export function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -19,42 +56,6 @@ export function AnimatedBackground() {
     let animationId: number;
     let particles: Particle[] = [];
 
-    class Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
-      opacity: number;
-
-      constructor(canvasWidth: number, canvasHeight: number) {
-        this.x = Math.random() * canvasWidth;
-        this.y = Math.random() * canvasHeight;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-        this.opacity = Math.random() * 0.5 + 0.2;
-      }
-
-      update(canvasWidth: number, canvasHeight: number) {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x > canvasWidth) this.x = 0;
-        if (this.x < 0) this.x = canvasWidth;
-        if (this.y > canvasHeight) this.y = 0;
-        if (this.y < 0) this.y = canvasHeight;
-      }
-
-      draw(drawCtx: CanvasRenderingContext2D, isDark: boolean) {
-        drawCtx.fillStyle = isDark
-          ? `rgba(99, 102, 241, ${this.opacity})`
-          : `rgba(99, 102, 241, ${this.opacity * 0.5})`;
-        drawCtx.beginPath();
-        drawCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        drawCtx.fill();
-      }
-    }
 
     function resize() {
       canvas.width = window.innerWidth;

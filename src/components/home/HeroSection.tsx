@@ -7,7 +7,7 @@ import { WordRotator } from '@/components/WordRotator';
 import { AbstractShapes } from '@/components/AbstractShapes';
 import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { ArrowRight, Play, Building2, TrendingDown, Zap } from 'lucide-react';
-import Image from 'next/image';
+
 
 export function HeroSection() {
   const t = useTranslations('hero');

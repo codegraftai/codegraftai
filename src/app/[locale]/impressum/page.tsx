@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Building2, Users, Mail, Phone, Scale } from 'lucide-react';
+import { Building2, Users, Mail, Scale } from 'lucide-react';
 
 export default function ImpressumPage() {
   const t = useTranslations('impressum');

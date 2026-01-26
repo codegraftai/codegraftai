@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { AbstractShapes } from '@/components/AbstractShapes';
-import { Mail, Phone, MapPin, Send, Calendar, Building2 } from 'lucide-react';
+import { Mail, MapPin, Send, Calendar, Building2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function ContactPage() {

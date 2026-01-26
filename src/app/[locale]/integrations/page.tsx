@@ -11,7 +11,6 @@ import {
   FileText,
   Workflow,
   MessageSquare,
-  Database,
   Shield,
   BarChart3,
   Check,
@@ -207,7 +206,7 @@ export default function IntegrationsPage() {
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {category.integrations.map((integration, index) => (
+                  {category.integrations.map((integration) => (
                     <div
                       key={integration.name}
                       className="relative flex flex-col items-center justify-center p-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors group"
