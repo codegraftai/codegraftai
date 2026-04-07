@@ -4,10 +4,14 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: isProd ? '/codegraftai' : '',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
+  ...(isProd && {
+    basePath: '/codegraftai',
+    assetPrefix: '/codegraftai',
+  }),
 };
 
 export default nextConfig;

@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "CodeGraft | Structural Integrity for Modern Software",
-  description: "CodeGraft ensures architectural coherence and prevents structural drift in high-velocity software engineering teams.",
+  title: "CodeGraft AI - BMW Enthusiast Tools",
+  description: "Software solutions for the BMW coding and diagnostics community.",
 };
 
 export default function RootLayout({
@@ -12,9 +23,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        {children}
+        <div className="layout-container">
+          <header className="header">
+            <div className="container">
+              <div className="logo-text">CodeGraft AI</div>
+            </div>
+          </header>
+          <main className="main">{children}</main>
+          <footer className="footer">
+            <div className="container">
+              <p>&copy; {new Date().getFullYear()} CodeGraft AI. Built for the BMW community.</p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
