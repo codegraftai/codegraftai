@@ -22,21 +22,21 @@ export default function Home() {
           <h2 className="section-title">Key Projects</h2>
           <div className="grid">
             <div className="card">
-              <h3 className="card-title">Core Infrastructure</h3>
+              <h3 className="card-title">Architectural Enforcement</h3>
               <p className="card-desc">
-                Foundational tools and libraries that power the codegraftai ecosystem.
+                Define and enforce structural invariants at the compiler and commit levels.
               </p>
             </div>
             <div className="card">
-              <h3 className="card-title">Open Standards</h3>
+              <h3 className="card-title">Drift Detection</h3>
               <p className="card-desc">
-                Commitment to interoperability and community-driven development.
+                Continuously monitor the divergence between design intent and actual implementation.
               </p>
             </div>
             <div className="card">
-              <h3 className="card-title">Advanced Research</h3>
+              <h3 className="card-title">Automated Governance</h3>
               <p className="card-desc">
-                Exploring the frontiers of technology to solve tomorrow's challenges today.
+                Scale technical leadership through automated policy enforcement.
               </p>
             </div>
           </div>
