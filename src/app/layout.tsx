@@ -8,7 +8,7 @@ import { ThemeProvider } from "../context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "CodeGraft AI",
-  description: "Architectural integrity and structural drift prevention.",
+  description: "AI code generation with architectural integrity and drift detection.",
 };
 
 export default function RootLayout({
@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="transition-colors duration-300">
       <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script dangerouslySetInnerHTML={{__html: `
           tailwind.config = {
@@ -26,8 +27,8 @@ export default function RootLayout({
             theme: {
               extend: {
                 colors: {
-                  primary: '#0891b2',
-                  secondary: '#0f172a',
+                  primary: '#10B981',
+                  secondary: '#dc2626',
                 }
               }
             }
